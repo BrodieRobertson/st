@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:autohint=true";
+static char *font = "DejaVu Sans Mono for Powerline:pixelsize=15:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
+    "Inconsolata for Powerline:pixelsize=15:antialias=true:autohint=true",
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 
@@ -91,30 +91,30 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#313539", /* black   */
+	"#b02626", /* red     */
+	"#40a62f", /* green   */
+	"#f2e635", /* yellow  */
+	"#314ad0", /* blue    */
+	"#b30ad0", /* magenta */
+	"#3bc9f1", /* cyan    */
+	"#acadb1", /* white   */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#676f78", /* black   */
+	"#b55454", /* red     */
+	"#78a670", /* green   */
+	"#faf380", /* yellow  */
+	"#707fd0", /* blue    */
+	"#c583d0", /* magenta */
+	"#8adaf1", /* cyan    */
+	"#e0e3e7", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#1d1f21", /* background */
+	"#d8dee9", /* foreground */
 };
 
 
@@ -122,10 +122,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
