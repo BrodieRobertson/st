@@ -708,6 +708,18 @@ execsh(char *cmd, char **args)
 	_exit(1);
 }
 
+
+/**
+ * Run a command passed in as cmd pointer of arg
+ */
+void
+kexecsh(const Arg* a)
+{
+    char buf[strlen(a->cmd) + 2];
+    snprintf(buf, sizeof buf, "%s%s", a->cmd, "\n");
+    ttywrite(buf, sizeof buf, 0);
+}
+
 void
 sigchld(int a)
 {
@@ -797,7 +809,7 @@ ttynew(char *line, char *cmd, char *out, char **args)
 		if (pledge("stdio getpw proc exec", NULL) == -1)
 			die("pledge\n");
 #endif
-		execsh(cmd, args);
+    execsh(cmd, args);
 		break;
 	default:
 #ifdef __OpenBSD__

@@ -162,8 +162,6 @@ static unsigned int defaultattr = 11;
  */
 static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-    /*{ Button4,              XK_NO_MOD,      "\031" },
-	{ Button5,              XK_NO_MOD,      "\005" },*/
     { Button4,              XK_NO_MOD,      "" },
 	{ Button5,              XK_NO_MOD,      "" },
 };
@@ -184,7 +182,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,           toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,           printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,           printsel,       {.i =  0} },
-	{ TERMMOD,              XK_plus,            zoom,           {.f = +1} },
+    { TERMMOD,              XK_L,               kexecsh,         {.cmd = "clear"} },
+    { TERMMOD,              XK_H,               kexecsh,        {.cmd = "history"} },
+    { TERMMOD,              XK_plus,            zoom,           {.f = +1} },
 	{ TERMMOD,              XK_underscore,      zoom,           {.f = -1} },
 	{ TERMMOD,              XK_parenright,      zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,               clipcopy,       {.i =  0} },
