@@ -8,9 +8,8 @@
 static char *font = "Source Code Pro Medium:pixelsize=15:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    //"DejaVu Sans Mono for Powerline:pixelsize=15:antialias=true:autohint=true",
-    //"Inconsolata for Powerline:pixelsize=15:antialias=true:autohint=true",
-    "Hack Nerd Font:pixelsize=15:antialias=true:autohint=true"
+    "Hack Nerd Font:pixelsize=15:antialias=true:autohint=true", // Powerline
+    "Symbola:pixelsize=15:antialias=true:autohint=true" // Unicode
 };
 
 static int borderpx = 2;
