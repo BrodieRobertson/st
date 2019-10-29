@@ -156,6 +156,9 @@ static unsigned int mousebg = 0;
  */
 static unsigned int defaultattr = 11;
 
+#define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
+
 /*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
@@ -168,13 +171,11 @@ static MouseShortcut mshortcuts[] = {
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
+	{ Button4,              MODKEY,      kscrollup,      {.i =  1} },
+	{ Button5,              MODKEY,      kscrolldown,    {.i =  1} },
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym              function        argument */
@@ -182,18 +183,18 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,           toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,           printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,           printsel,       {.i =  0} },
-    { MODKEY,               XK_c,               kexecsh,        {.cmd = "clear"} },
-    { MODKEY,               XK_h,               kexecsh,        {.cmd = "history"} },
-    { MODKEY,               XK_plus,            zoom,           {.f = +1} },
-	{ MODKEY,               XK_underscore,      zoom,           {.f = -1} },
-	{ MODKEY,               XK_parenright,      zoomreset,      {.f =  0} },
-	{ TERMMOD,               XK_Y,               clipcopy,       {.i =  0} },
-	{ TERMMOD,               XK_V,               clippaste,      {.i =  0} },
-	{ TERMMOD,               XK_P,               selpaste,       {.i =  0} },
+    { TERMMOD,              XK_C,               kexecsh,        {.cmd = "clear"} },
+    { TERMMOD,              XK_H,               kexecsh,        {.cmd = "history"} },
+    { TERMMOD,              XK_plus,            zoom,           {.f = +1} },
+	{ TERMMOD,              XK_underscore,      zoom,           {.f = -1} },
+	{ TERMMOD,              XK_parenright,      zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_Y,               clipcopy,       {.i =  0} },
+	{ TERMMOD,              XK_V,               clippaste,      {.i =  0} },
+	{ TERMMOD,              XK_P,               selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,          selpaste,       {.i =  0} },
 	{ MODKEY,               XK_Up,              kscrollup,      {.i = 1} },
 	{ MODKEY,               XK_Down,            kscrolldown,    {.i = 1} },
-	{ MODKEY,               XK_k,               kscrollup,      {.i = 1} },
+    { MODKEY,               XK_k,               kscrollup,      {.i = 1} },
 	{ MODKEY,               XK_j,               kscrolldown,    {.i = 1} },
 	{ MODKEY,               XK_Page_Up,         kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_Page_Down,       kscrolldown,    {.i = -1} }
