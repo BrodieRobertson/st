@@ -97,7 +97,7 @@ static const char *colorname[] = {
 	"#f2e635", /* yellow  */
 	"#314ad0", /* blue    */
 	"#b30ad0", /* magenta */
-	"#3bc9f1", /* cyan    */
+	"#32d0fc", /* cyan    */
 	"#acadb1", /* white   */
 
 	/* 8 bright colors */
@@ -165,8 +165,8 @@ static unsigned int defaultattr = 11;
  */
 static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-    { Button4,              XK_NO_MOD,      "" },
-	{ Button5,              XK_NO_MOD,      "" },
+	{ Button4,              XK_NO_MOD,      "\031" },
+	{ Button5,              XK_NO_MOD,      "\005" },
 };
 
 MouseKey mkeys[] = {
@@ -176,7 +176,6 @@ MouseKey mkeys[] = {
 };
 
 /* Internal keyboard shortcuts. */
-
 static Shortcut shortcuts[] = {
 	/* mask                 keysym              function        argument */
 	{ XK_ANY_MOD,           XK_Break,           sendbreak,      {.i =  0} },
@@ -196,8 +195,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Down,            kscrolldown,    {.i = 1} },
     { MODKEY,               XK_k,               kscrollup,      {.i = 1} },
 	{ MODKEY,               XK_j,               kscrolldown,    {.i = 1} },
-	{ MODKEY,               XK_Page_Up,         kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_Page_Down,       kscrolldown,    {.i = -1} }
+	{ MODKEY,               XK_Page_Up,         kscrollup,      {.i = 1} },
+	{ MODKEY,               XK_Page_Down,       kscrolldown,    {.i = 1} }
 };
 
 
