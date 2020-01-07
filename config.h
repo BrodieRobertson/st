@@ -182,23 +182,26 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,           toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,           printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,           printsel,       {.i =  0} },
-    { TERMMOD,              XK_C,               kexecsh,        {.cmd = "clear"} },
-    { TERMMOD,              XK_H,               kexecsh,        {.cmd = "history"} },
-    { TERMMOD,              XK_plus,            zoom,           {.f = +1} },
-	{ TERMMOD,              XK_underscore,      zoom,           {.f = -1} },
-	{ TERMMOD,              XK_parenright,      zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_Y,               clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,               clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_P,               selpaste,       {.i =  0} },
+  { MODKEY,               XK_equal,           zoom,           {.f = +1} },
+	{ MODKEY,               XK_minus,           zoom,           {.f = -1} },
+	{ MODKEY,               XK_0,               zoomreset,      {.f =  0} },
+	{ MODKEY,               XK_y,               clipcopy,       {.i =  0} },
+	{ MODKEY,               XK_p,               clippaste,      {.i =  0} },
 	{ ShiftMask,            XK_Insert,          selpaste,       {.i =  0} },
 	{ MODKEY,               XK_Up,              kscrollup,      {.i = 1} },
 	{ MODKEY,               XK_Down,            kscrolldown,    {.i = 1} },
-    { MODKEY,               XK_k,               kscrollup,      {.i = 1} },
+  { MODKEY,               XK_k,               kscrollup,      {.i = 1} },
 	{ MODKEY,               XK_j,               kscrolldown,    {.i = 1} },
-	{ MODKEY,               XK_Page_Up,         kscrollup,      {.i = 1} },
-	{ MODKEY,               XK_Page_Down,       kscrolldown,    {.i = 1} }
+  { MODKEY,               XK_u,               kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_d,               kscrolldown,    {.i = -1} },
+	{ MODKEY,               XK_Page_Up,         kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_Page_Down,       kscrolldown,    {.i = -1} },
+  // Execute script
+  //{ MODKEY,               XK_c,               kexecsh,        {.ca = "clear"} },
+  //{ MODKEY,               XK_h,               kexecsh,        {.ca = "history"} },
+  // String mappings
+  { ControlMask,          XK_slash,           kwrite,         {.ca = "++"} }
 };
-
 
 /*
  * Special keys (change & recompile st.info accordingly)
