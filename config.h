@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Source Code Pro Medium:pixelsize=15:antialias=true:autohint=true";
+static char *font = "JetBrains Mono Medium:pixelsize=15:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
     "Hack Nerd Font:pixelsize=15:antialias=true:autohint=true", // Powerline
@@ -113,7 +113,7 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#1d1f21", /* background */
+	"#191919", /* background */
 	"#d8dee9", /* foreground */
 };
 
@@ -200,7 +200,7 @@ static Shortcut shortcuts[] = {
   //{ MODKEY,               XK_c,               kexecsh,        {.ca = "clear"} },
   //{ MODKEY,               XK_h,               kexecsh,        {.ca = "history"} },
   // String mappings
-  { ControlMask,          XK_slash,           kwrite,         {.ca = "++"} }
+  { ControlMask,          XK_slash,           kwrite,         {.ca = "gc"} }
 };
 
 /*
