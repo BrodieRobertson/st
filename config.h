@@ -9,6 +9,7 @@ static char *font = "JetBrains Mono Medium:pixelsize=15:antialias=true:autohint=
 /* Spare fonts */
 static char *font2[] = {
     "Hack Nerd Font:pixelsize=15:antialias=true:autohint=true", // Powerline
+    "IPAGothic:pixelsize=15:antialias=true:autohint=true", // Japanese
     "Symbola:pixelsize=15:antialias=true:autohint=true" // Unicode
 };
 
