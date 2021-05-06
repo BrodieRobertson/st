@@ -1,1 +1,1 @@
-{"version":1,"ops":[{"type":3,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620290906,"message":"ANother comment","files":null}]}
+{"version":1,"ops":[{"type":4,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620292564,"status":2},{"type":4,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620292564,"status":1},{"type":5,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620292573,"added":["NewLabel"],"removed":null}]}
