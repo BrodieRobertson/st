@@ -1,1 +1,1 @@
-{"version":1,"ops":[{"type":1,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620290472,"title":"This is a new bug","message":"This is a comment I think","files":null}]}
+{"version":1,"ops":[{"type":4,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620290502,"status":2},{"type":4,"author":{"id":"1062623d5b01eac42e287ac44699f38243d38df6"},"timestamp":1620290503,"status":1}]}
